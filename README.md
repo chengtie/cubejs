@@ -11,7 +11,7 @@ We have followed this link: https://cube.dev/blog/building-mongodb-dashboard-usi
 - start mongosqld
 
 ```
-$ bin/mongosqld
+$ mongosqld
 ```
 
 - initiate the folder
