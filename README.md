@@ -34,7 +34,7 @@ CUBEJS_API_SECRET=...
 
 - generate `schema/Zips.js`
 ```
-$cubejs generate -t zips
+$ cubejs generate -t zips
 ```
 
 - as a result, after `npm run dev`, we could launch `http://localhost:4000` in a browser
