@@ -19,7 +19,10 @@ const renderChart = resultSet => (
 );
 
 const cubejsApi = cubejs(
-  "f57d130c2da97a0eaa6cc3443d7c7c06b75d73c3debf9681adedc5328ce3d4f8977e4567f25d7a1888b7f2606654613615c730d06dd38ff71a752ea78428b8c7",
+  // "f57d130c2da97a0eaa6cc3443d7c7c06b75d73c3debf9681adedc5328ce3d4f8977e4567f25d7a1888b7f2606654613615c730d06dd38ff71a752ea78428b8c7",
+  // CUBEJS_API_SECRET,
+  // "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODg5MzQyOTYsImV4cCI6MTYwNDQ4NjI5Nn0.RVdHlpfubXDgwG1FRYbUm-UDLVBjnb-HSVTK5bEy-ZU",
+  "abc",
   { apiUrl: "http://localhost:4000/cubejs-api/v1" }
 );
 

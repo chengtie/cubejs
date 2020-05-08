@@ -1,0 +1,204 @@
+cube(`Users`, {
+  sql: `SELECT * FROM news.users`,
+  
+  joins: {
+    
+  },
+  
+  measures: {
+    count: {
+      type: `count`,
+      drillMembers: [currentname, currentprovider, googleJsonDisplayname, googleJsonId, googleJsonNameFamilyname, googleJsonNameGivenname, googleDisplayname, googleId, googleNameFamilyname, googleNameGivenname, googleProvider, localId, localProvider, firstdate]
+    },
+    
+    googleJsonCircledbycount: {
+      sql: `${CUBE}.\`google._json.circledByCount\``,
+      type: `sum`,
+      title: `Google. Json.circledbycount`
+    }
+  },
+  
+  dimensions: {
+    currentname: {
+      sql: `${CUBE}.\`currentName\``,
+      type: `string`
+    },
+    
+    currentprovider: {
+      sql: `${CUBE}.\`currentProvider\``,
+      type: `string`
+    },
+    
+    firstapp: {
+      sql: `${CUBE}.\`firstApp\``,
+      type: `string`
+    },
+    
+    googleJsonDisplayname: {
+      sql: `${CUBE}.\`google._json.displayName\``,
+      type: `string`,
+      title: `Google. Json.displayname`
+    },
+    
+    googleJsonEtag: {
+      sql: `${CUBE}.\`google._json.etag\``,
+      type: `string`,
+      title: `Google. Json.etag`
+    },
+    
+    googleJsonGender: {
+      sql: `${CUBE}.\`google._json.gender\``,
+      type: `string`,
+      title: `Google. Json.gender`
+    },
+    
+    googleJsonId: {
+      sql: `${CUBE}.\`google._json.id\``,
+      type: `string`,
+      title: `Google. Json.id`
+    },
+    
+    googleJsonImageUrl: {
+      sql: `${CUBE}.\`google._json.image.url\``,
+      type: `string`,
+      title: `Google. Json.image.url`
+    },
+    
+    googleJsonKind: {
+      sql: `${CUBE}.\`google._json.kind\``,
+      type: `string`,
+      title: `Google. Json.kind`
+    },
+    
+    googleJsonLanguage: {
+      sql: `${CUBE}.\`google._json.language\``,
+      type: `string`,
+      title: `Google. Json.language`
+    },
+    
+    googleJsonNameFamilyname: {
+      sql: `${CUBE}.\`google._json.name.familyName\``,
+      type: `string`,
+      title: `Google. Json.name.familyname`
+    },
+    
+    googleJsonNameGivenname: {
+      sql: `${CUBE}.\`google._json.name.givenName\``,
+      type: `string`,
+      title: `Google. Json.name.givenname`
+    },
+    
+    googleJsonObjecttype: {
+      sql: `${CUBE}.\`google._json.objectType\``,
+      type: `string`,
+      title: `Google. Json.objecttype`
+    },
+    
+    googleJsonUrl: {
+      sql: `${CUBE}.\`google._json.url\``,
+      type: `string`,
+      title: `Google. Json.url`
+    },
+    
+    googleRaw: {
+      sql: `${CUBE}.\`google._raw\``,
+      type: `string`,
+      title: `Google. Raw`
+    },
+    
+    googleDisplayname: {
+      sql: `${CUBE}.\`google.displayName\``,
+      type: `string`,
+      title: `Google.displayname`
+    },
+    
+    googleGender: {
+      sql: `${CUBE}.\`google.gender\``,
+      type: `string`,
+      title: `Google.gender`
+    },
+    
+    googleId: {
+      sql: `${CUBE}.\`google.id\``,
+      type: `string`,
+      title: `Google.id`
+    },
+    
+    googleNameFamilyname: {
+      sql: `${CUBE}.\`google.name.familyName\``,
+      type: `string`,
+      title: `Google.name.familyname`
+    },
+    
+    googleNameGivenname: {
+      sql: `${CUBE}.\`google.name.givenName\``,
+      type: `string`,
+      title: `Google.name.givenname`
+    },
+    
+    googleProvider: {
+      sql: `${CUBE}.\`google.provider\``,
+      type: `string`,
+      title: `Google.provider`
+    },
+    
+    localExpired: {
+      sql: `${CUBE}.\`local.expired\``,
+      type: `string`,
+      title: `Local.expired`
+    },
+    
+    localFirstapp: {
+      sql: `${CUBE}.\`local.firstApp\``,
+      type: `string`,
+      title: `Local.firstapp`
+    },
+    
+    localHash: {
+      sql: `${CUBE}.\`local.hash\``,
+      type: `string`,
+      title: `Local.hash`
+    },
+    
+    localId: {
+      sql: `${CUBE}.\`local.id\``,
+      type: `string`,
+      title: `Local.id`
+    },
+    
+    localProvider: {
+      sql: `${CUBE}.\`local.provider\``,
+      type: `string`,
+      title: `Local.provider`
+    },
+    
+    localSalt: {
+      sql: `${CUBE}.\`local.salt\``,
+      type: `string`,
+      title: `Local.salt`
+    },
+    
+    localType: {
+      sql: `${CUBE}.\`local.type\``,
+      type: `string`,
+      title: `Local.type`
+    },
+    
+    localVerificationcode: {
+      sql: `${CUBE}.\`local.verificationCode\``,
+      type: `string`,
+      title: `Local.verificationcode`
+    },
+    
+    localVerified: {
+      sql: `${CUBE}.\`local.verified\``,
+      type: `string`,
+      title: `Local.verified`
+    },
+    
+    firstdate: {
+      sql: `${CUBE}.\`firstDate\``,
+      type: `time`
+    }
+  }
+});
